@@ -1,0 +1,5 @@
+rootProject.name = 'ft-crm'
+include 'ft-core'
+include 'ft-build'
+include 'bl-common'
+

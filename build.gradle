@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+//group 'com.blove'
+//version '1.0.1'
+
+//sourceCompatibility = 1.8
+
+//repositories {
+//    mavenLocal()
+//    maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+//}
+
+allprojects {
+    group 'com.blove'
+    version '1.0.1'
+
+    //编译版本指定
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    // java编译的时候缺省状态下会因为中文字符而失败
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+    //仓库指定
+    repositories {
+        mavenLocal()//本地maven仓库
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" } //阿里云远程maven仓库
+        mavenCentral()
+    }
+}
+
+subprojects {
+
+}
+
+
+
+dependencies {
+//    compile 'org.springframework:spring-core:4.3.20.RELEASE'
+}

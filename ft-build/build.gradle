@@ -1,0 +1,10 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+dependencies {
+    compile project(':ft-core')
+    compile 'com.thetransactioncompany:cors-filter:2.6'
+    compile 'javax.servlet:javax.servlet-api:3.1.0'
+}
